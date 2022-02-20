@@ -1,0 +1,37 @@
+Overview of the analysis: Explain the purpose of this analysis.
+    The purpose of this analysis is to create an algorithm that predicts whether or not applicants will get their necessary funding.
+
+Results: Using bulleted lists and images to support your answers, address the following questions.
+
+Data Preprocessing
+    What variable(s) are considered the target(s) for your model?
+        IS_SUCCESSFUL, CLASSIFICATION
+        These variables are crucial for creating an accurate algorithm. These variables help asses where the applicants fall along with whether or not it would be successful.
+
+    What variable(s) are considered to be the features for your model?
+        APPLICATION_TYPE, STATUS, ASK_AMT, SPECIAL_CONSIDERATIONS, AFFILIATION
+        These variables are what the algorithm uses to teach itself and make a judgement with.
+
+    What variable(s) are neither targets nor features, and should be removed from the input data?
+        EIN, NAME, USE_CASE
+        These variables are excessive and do not contribute to the overall model. 
+
+Compiling, Training, and Evaluating the Model
+    How many neurons, layers, and activation functions did you select for your neural network model, and why?
+        0, 50, 1
+        This selection seemed to yield the best results. I tried several option over the course 
+        of testing and this selection seemed to be the best. 
+
+    Were you able to achieve the target model performance?
+        I was able to get close to the goal but after testing at least 15 different variations,
+        the closest is could manage was 73% accuracy.
+
+    What steps did you take to try and increase model performance?
+        I adjusted the neuron, layers and the activation types on the layers. I also adjusted the number
+        of epochs in hopes of getting a better result.
+
+Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+    My recommendation would be to increase the number of layers in hopes that the results can be a little more accurate.
+    The additional layers would allow for more processes to be run. In my testing I found linear to be useful in the early 
+    layers but detrimental in the later layers. If we could do a combo of linear to start, relu in the middle, and then end
+    with two layers of sigmoid I am confident we'd see an increase in results. 
